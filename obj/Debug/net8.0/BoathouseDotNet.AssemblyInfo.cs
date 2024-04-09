@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BoathouseDotNet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c062f0a4258f6ca1bfedfdcfe9283ea5cbb6b37")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea3aabedb5948f85e85841a5a632a9ead5605f5f")]
 [assembly: System.Reflection.AssemblyProductAttribute("BoathouseDotNet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BoathouseDotNet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

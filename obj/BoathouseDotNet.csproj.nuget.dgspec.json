@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Source\\Boathouse-Examples\\dotnet-example\\src\\BoathouseDotNet.csproj": {}
+    "C:\\Source\\Boathouse-Examples\\dotnet-example\\BoathouseDotNet.csproj": {}
   },
   "projects": {
-    "C:\\Source\\Boathouse-Examples\\dotnet-example\\src\\BoathouseDotNet.csproj": {
+    "C:\\Source\\Boathouse-Examples\\dotnet-example\\BoathouseDotNet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Source\\Boathouse-Examples\\dotnet-example\\src\\BoathouseDotNet.csproj",
+        "projectUniqueName": "C:\\Source\\Boathouse-Examples\\dotnet-example\\BoathouseDotNet.csproj",
         "projectName": "BoathouseDotNet",
-        "projectPath": "C:\\Source\\Boathouse-Examples\\dotnet-example\\src\\BoathouseDotNet.csproj",
+        "projectPath": "C:\\Source\\Boathouse-Examples\\dotnet-example\\BoathouseDotNet.csproj",
         "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
-        "outputPath": "C:\\Source\\Boathouse-Examples\\dotnet-example\\src\\obj\\",
+        "outputPath": "C:\\Source\\Boathouse-Examples\\dotnet-example\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
