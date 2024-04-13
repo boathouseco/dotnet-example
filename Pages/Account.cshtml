@@ -1,0 +1,54 @@
+﻿@page
+@using System.Web
+@using Newtonsoft.Json
+@model AccountModel
+@{
+	ViewData["Title"] = "Account Page";
+}
+
+<div class="">
+	<h1 class="display-4">Account Page</h1>
+
+	<p>You are logged in to this application as Paddle Customer ID <b>@Model.Boathouse.paddleCustomerID</b>.</p>
+
+	<p>This is the return value from the Boathouse API:</p>
+	<pre>@JsonConvert.SerializeObject(Model.Boathouse, Formatting.Indented)</pre>
+
+	@if (!Model.Boathouse.activeSubscriptions.Any())
+	{
+		<p>This is the pricing table that Boathouse generates for you from your plan configuration. You can subscribe to a plan using the test credit card information below</p>
+
+		<div style="margin: 5em 0">
+			@Html.Raw(Model.Boathouse.pricingTableHtml)
+		</div>
+
+		<p>Test Credit Card Information</p>
+
+		<ul>
+			<li>Card: 4000 0566 5566 5556	</li>
+			<li>CVC: 100</li>
+			<li>Expiry: @DateTime.Now.Month/@DateTime.Now.Year</li>
+		</ul>
+	}
+	else
+	{
+		<p>You already have a subscription. Click here to open your <a href="@Model.Boathouse.billingPortalUrl">billing portal</a>.</p>
+	}
+
+</div>
+
+@section Scripts {
+	<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+	<script type="text/javascript">
+		Paddle.Environment.set("sandbox");
+		Paddle.Initialize({
+			token: 'test_ad79b30a7bab65b54ee5213f2b5',
+			eventCallback: (e) => {
+				if (e.name == "checkout.completed") location.href = "Processing?pids=" + e.data.items.map(x=>x.price_id).join(",");
+			}
+		});
+	</script>
+}
+
+
+

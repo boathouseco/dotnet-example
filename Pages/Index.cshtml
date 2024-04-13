@@ -1,10 +1,19 @@
 ﻿@page
+@using System.Web
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+
+    var createAccountUrl = HttpUtility.UrlEncode(Url.Page("/CreateAccount", pageHandler: null, values: new { returnUrl = Request.Path }, protocol: Request.Scheme) + "&v=2");
 }
 
-<div class="text-center">
+<div class="">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <p>This is the anonymous pricing table loaded from Boathouse using an iframe shown to your website visitors. Click on the button to be redirected to the dummy login.</p>
+
+    <iframe src="@($"https://my.boathouse.pro/api/v1/pricingtableiframe?p=7844a538-d99e-4dee-b296-08dc57f5b69a&l={createAccountUrl}&s=https%3A%2F%2Fmy.boathouse.pro%2Fcss%2Fpricing-table-default.css")" frameBorder="0" style="width:100%;height:500px"></iframe>
 </div>
+
+
+
