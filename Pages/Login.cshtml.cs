@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace BoathouseDotNet.Pages
 {
-	public class CreateAccountModel(IConfiguration configuration) : PageModel
+	public class LoginModel(IConfiguration configuration) : PageModel
 	{
 		public bool Success { get; set; }
 

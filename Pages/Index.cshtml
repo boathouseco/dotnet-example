@@ -4,7 +4,7 @@
 @{
     ViewData["Title"] = "Home page";
 
-    var createAccountUrl = HttpUtility.UrlEncode(Url.Page("/CreateAccount", pageHandler: null, values: new { returnUrl = Request.Path }, protocol: Request.Scheme) + "&v=2");
+    var createAccountUrl = HttpUtility.UrlEncode(Url.Page("/Login", pageHandler: null, values: new { returnUrl = Request.Path }, protocol: Request.Scheme) + "&v=2");
 }
 
 <div class="">

@@ -22,14 +22,16 @@
 			@Html.Raw(Model.Boathouse.pricingTableHtml)
 		</div>
 
-		<p>Test Credit Card Information</p>
+		<div class="border border-red-500 rounded-xl p-5 bg-red-50 text-base">
+			<div class="text-lg font-bold">Use this test credit card for the checkout</div>
 
-		<ul>
-			<li>Card: 4000 0566 5566 5556	</li>
-			<li>Name: Any</li>
-			<li>CVC: 100</li>
-			<li>Expiry: @DateTime.Now.Month/@DateTime.Now.Year</li>
-		</ul>
+			<ul>
+				<li>Card: 4000 0566 5566 5556	</li>
+				<li>Name: Any</li>
+				<li>CVC: 100</li>
+				<li>Expiry: @DateTime.Now.Month/@DateTime.Now.Year</li>
+			</ul>
+		</div>
 	}
 	else
 	{
@@ -45,7 +47,7 @@
 		Paddle.Initialize({
 			token: 'test_ad79b30a7bab65b54ee5213f2b5',
 			eventCallback: (e) => {
-				if (e.name == "checkout.completed") location.href = "Processing?pids=" + e.data.items.map(x=>x.price_id).join(",");
+				if (e.name == "checkout.completed") location.href = "Processing?pids=" + e.data.items.map(x => x.price_id).join(",");
 			}
 		});
 	</script>
