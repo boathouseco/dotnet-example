@@ -367,3 +367,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /bruno/**/**LIVE**
 /bruno/Paddle/THOMAS Get Subscriptions LIVE.bru
+/appsettings.Development.json
